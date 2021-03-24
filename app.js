@@ -13,21 +13,15 @@ const router = require("./router/router");
 const bodyParser = require("koa-body");
 
 const cors = require("koa2-cors");
-
-const serve = require('koa-static')
-
-// 创建一个Koa对象表示web app本身:
 var app = new Koa();
+app.use(cors());
 
 // 对于任何请求，app将调用该异步函数处理请求：
 app.use(bodyParser());
 
-app.use(cors());
-
-
-
-app.use(serve(__dirname + '/public')).use(router.routes());
+app.use(router.routes());
 
 console.log("项目启动http://82.156.109.184:3000");
+console.log("项目启动http://localhost:3000");
 
 app.listen(3000);

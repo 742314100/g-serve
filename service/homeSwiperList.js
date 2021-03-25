@@ -1,8 +1,6 @@
 const allSqlAction = require('../lib/mysql');
 const handle = require('../utils/handle');
 
-console.log(handle)
-
 async function getHomeSwiperList(){
   let sql = `select * from homeSwiperList`;
   return allSqlAction.allSqlAction(sql).then((res)=>{

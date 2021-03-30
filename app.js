@@ -21,11 +21,11 @@ app.use(bodyParser());
 
 app.use(router.routes());
 
-console.log("项目启动http://82.156.109.184:3000");
-console.log("项目启动http://localhost:3000");
-
 app.listen(3000);
 
 
 //CREATE USER '742314100'@'%' IDENTIFIED BY 'l4035564121';
 //grant all privileges on *.* to '742314100'@'%';
+//FLUSH PRIVILEGES;
+
+//GRANT ALL PRIVILEGES ON *.* TO '742314100'@'%' IDENTIFIED BY 'l4035564121' WITH GRANT OPTION;
